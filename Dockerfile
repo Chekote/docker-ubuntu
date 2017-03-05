@@ -1,5 +1,5 @@
-# chekote/ubuntu:yakkety
-FROM ubuntu:yakkety
+# chekote/ubuntu:zesty
+FROM ubuntu:zesty
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -12,4 +12,3 @@ RUN locale-gen en_US.UTF-8 && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
