@@ -1,5 +1,5 @@
-# chekote/ubuntu:zesty
-FROM ubuntu:zesty
+# chekote/ubuntu:xenial
+FROM ubuntu:xenial
 
 ENV DEBIAN_FRONTEND noninteractive
 
