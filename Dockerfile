@@ -1,5 +1,5 @@
-# chekote/ubuntu:xenial
-FROM ubuntu:xenial
+# chekote/ubuntu:bionic
+FROM ubuntu:bionic
 
 ENV DEBIAN_FRONTEND noninteractive
 
