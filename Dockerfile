@@ -3,8 +3,12 @@ FROM ubuntu:bionic
 
 ENV DEBIAN_FRONTEND noninteractive
 
-    # Fix 'debconf: delaying package configuration, since apt-utils is not installed'
 RUN apt-get update && \
+    #
+    # Upgrade all packages
+    apt-get upgrade && \
+    #
+    # Fix 'debconf: delaying package configuration, since apt-utils is not installed'
     apt-get install -y apt-utils && \
     #
     # Fix -u may not run as fully supported user (no home, no /etc/passwd entry, etc). See entrypoint.sh
