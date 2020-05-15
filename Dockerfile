@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     #
     # Upgrade all packages
-    apt-get upgrade && \
+    apt-get upgrade -y && \
     #
     # Fix 'debconf: delaying package configuration, since apt-utils is not installed'
     apt-get install -y apt-utils && \
