@@ -8,7 +8,7 @@ RUN apt-get update && \
     # Upgrade all packages
     apt-get upgrade -y && \
     #
-    apt-get install -y \
+    apt-get install -y --no-install-suggests --no-install-recommends \
       # Fix 'debconf: delaying package configuration, since apt-utils is not installed'
       apt-utils \
       #
