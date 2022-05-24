@@ -1,5 +1,7 @@
 # chekote/ubuntu:latest
-FROM ubuntu:latest
+ARG FROM_TAG=latest
+
+FROM ubuntu:$FROM_TAG
 
 ENV DEBIAN_FRONTEND noninteractive
 
