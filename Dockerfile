@@ -18,7 +18,10 @@ RUN set -eu; \
       apt-utils \
       #
       # Fix -u may not run as fully supported user (no home, no /etc/passwd entry, etc). See entrypoint.sh
-      gosu; \
+      gosu \
+      #
+      # Make sure we have the most recent Certificate Authority Certificates
+      ca-certificates; \
     #
     # Cleanup
     apt-get autoremove -y; \
