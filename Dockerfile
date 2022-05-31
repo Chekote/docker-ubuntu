@@ -23,9 +23,6 @@ RUN set -eu; \
       # Make sure we have the most recent Certificate Authority Certificates
       ca-certificates; \
     #
-    # Create the default user
-    useradd --shell /bin/bash -u 1000 -m user; \
-    #
     # Cleanup
     apt-get autoremove -y; \
     apt-get clean; \
