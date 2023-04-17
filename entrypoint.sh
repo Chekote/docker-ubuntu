@@ -15,11 +15,11 @@ if [ "$USER_NAME" == "" ]; then
 
   # Create the home folder if it doesn't already exist.
   if [ ! -d "/home/user" ]; then
-    ARGS='-m'
+    MAKE_HOME='-m'
   fi
 
   # Create the user.
-  useradd --shell /bin/bash -u "${USER_ID}" ${ARGS} user
+  useradd --shell /bin/bash -u "${USER_ID}" ${MAKE_HOME} user
   export HOME="/home/${USER_NAME}"
 
   # Ensure home is owned by user (Docker may have created it as root when mounting volumes)
