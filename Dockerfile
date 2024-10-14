@@ -5,7 +5,7 @@ FROM ubuntu:$FROM_TAG
 
 ARG TARGETPLATFORM
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN set -eu; \
     #
