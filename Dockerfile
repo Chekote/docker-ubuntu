@@ -1,4 +1,6 @@
 # chekote/ubuntu:latest
+# chekote/ubuntu:$RELEASE_NAME
+# chekote/ubuntu:$RELEASE_NAME-$(date +%Y-%m-%d)
 ARG FROM_TAG=latest
 
 FROM ubuntu:$FROM_TAG
