@@ -48,7 +48,10 @@ RUN set -eu; \
     fi; \
     #
     # Remove the vulnerable character sets
-    sed -i -E '/CN-?EXT/d' "/usr/lib/$DIR/gconv/gconv-modules.d/gconv-modules-extra.conf";
+    sed -i -E '/CN-?EXT/d' "/usr/lib/$DIR/gconv/gconv-modules.d/gconv-modules-extra.conf"; \
+    #
+    # Remove default "ubuntu" user
+    userdel -r ubuntu;
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
